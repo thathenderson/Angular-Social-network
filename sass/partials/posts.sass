@@ -1,0 +1,67 @@
+/* Posts */
+.post 
+	position: relative
+	width: 100%
+	margin: 30px 0
+	border-radius: 4px
+	box-shadow: 0 1px 3px 0px rgba(0,0,0,0.3)
+	background-color: #fff
+
+.post-creator 
+	padding: 20px 15px 0 15px
+
+.post-text, .post-new-content 
+	padding: 20px 15px
+
+.post-photo 
+	padding: 15px 5px
+
+	img 
+		width: 100%
+		height: 100%
+
+.photo-caption 
+	padding: 20px 15px
+
+.post-interaction 
+	padding: 0 15px 15px 15px
+	
+	button 
+		padding: 3px 5px
+		margin: 0 10px 0 0
+		background-color: #fff
+		border-width: 1px
+		border-style: solid
+		@include grey
+		font-weight: 700
+		font-size: 1em
+
+		&:hover
+			color: $grey-hover
+			border-color: $grey-hover
+
+		&::before 
+			display: inline-block
+			position: relative
+			top: 1px
+			margin-right: 2px
+
+
+	.button-like::before 
+		content: "\e602"
+
+	.button-share::before 
+		content: "\e601"
+
+
+.post-bottom-half 
+	width: 100%
+	padding: 15px
+	position: relative
+	bottom: 0
+	left: 0
+	background-color: $post-bottom-shader
+	border-top-width: 1px
+	border-top-style: solid
+	border-color: $light-border
+	border-radius: 0 0 4px 4px

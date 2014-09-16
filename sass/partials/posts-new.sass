@@ -1,0 +1,27 @@
+/* New Post controls */
+.button-new-post 
+	display: inline-block
+	padding: 5px 30px
+	@include gc-blue
+	border-width: 0 1px 3px 1px
+	border-style: solid
+	text-align: center
+	-webkit-user-select: none
+	user-select: none
+
+	&:hover 
+		cursor: pointer
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4)
+
+	&:active 
+		box-shadow: none
+		border-width: 0 1px 1px 1px
+
+.input-new-post 
+	width: 100%
+	padding: 10px
+	border-width: 1px
+	border-style: solid
+	border-color: $light-border
+	vertical-align
+	font-size: 1.2em

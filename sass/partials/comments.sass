@@ -1,0 +1,35 @@
+/* Comments */
+.comments 
+	font-size: 0.8em
+	font-weight: 700
+
+	.comment 
+		font-weight: normal
+		margin: 10px 0
+
+.comment-count
+	@include grey
+
+	&::after 
+		content: "\e600"
+		display: inline-block
+		position: relative
+		top: 2px
+		margin-left: 5px
+		font-size: 1.2em
+
+.commenter-avatar 
+	width: 25px
+	height: 25px
+	margin-right: 10px
+	@include gc-blue
+
+.commenter-entry div 
+	line-height: 1em
+
+.commenter-name 
+	padding-bottom: 4px
+	font-weight: 700
+	
+	span 
+		font-weight: normal

@@ -1,0 +1,39 @@
+/* Fonts */
+@font-face
+	font-family: 'icomoon'
+	src: url('fonts/icomoon.eot?1ry0lt')
+	src: url('fonts/icomoon.eot?#iefix1ry0lt') format('embedded-opentype'), url('fonts/icomoon.woff?1ry0lt') format('woff'), url('fonts/icomoon.ttf?1ry0lt') format('truetype'), url('fonts/icomoon.svg?1ry0lt#icomoon') format('svg')
+	font-weight: normal
+	font-style: normal
+
+/* Main Layout */
+body 
+	background-color: $main-background
+	font-family: "Lucida Grande", "Helvetica", sans-serif
+	font-size: 100%
+	line-height: 1.3em
+	color: $text-color-main
+
+main, button 
+	font-size: 0.9em
+
+button, input 
+	border-radius: 3px
+
+.icomoon::before, .icomoon::after 
+	font-family: 'icomoon'
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.container 
+	width: 80%
+	max-width: 800px
+	margin: 0 auto
