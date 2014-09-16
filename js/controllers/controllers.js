@@ -7,7 +7,7 @@ var Controllers = angular.module('Controllers', [])
 
 		$scope.user = {
 			name: "GotChosen",
-			avatarSrc: "/images/gc-thumbsup.png"
+			avatarSrc: "/gotchosen-mock/images/gc-thumbsup.png"
 		}
 
 		//static model data
@@ -23,7 +23,7 @@ var Controllers = angular.module('Controllers', [])
 			},
 			{
 				id: 2,
-				content: "Me_guy.jpg",
+				content: "/gotchosen-mock/images/Me_guy.jpg",
 				likeCount: 457,
 				shareCount: 300,
 				shareScope: "publicly",

@@ -47,7 +47,7 @@
 						<div ng-switch-when="text" class="post-text">{{post.content}}</div>
 						<div ng-switch-when="photo" class="post-photo">
 							<div class="photo-caption">{{post.photoCaption}}</div>
-							<img ng-src="/images/{{post.content}}" />
+							<img ng-src="{{post.content}}" />
 						</div>
 						<div ng-switch-default>{{post.content}}</div>
 					</div>

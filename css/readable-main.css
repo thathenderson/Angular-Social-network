@@ -73,7 +73,7 @@ button, input {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -283,6 +283,9 @@ button, input {
   color: #fcfcfc;
 }
 
+.commenter-entry {
+  width: 80%;
+}
 .commenter-entry div {
   line-height: 1em;
 }
