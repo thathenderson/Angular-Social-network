@@ -1,0 +1,81 @@
+<!doctype html>
+<html ng-app="GotChosenApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GotChosen Mock - Michael Henderson</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.1/angular.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers/controllers.js"></script>
+
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="main-background">
+	<main ng-controller="GotChosenController">
+		<div class="container">
+			<section class="post">
+				<form id="form_newPost">
+					<section class="post-top-half">
+						<div class="post-creator cf">
+							<div class="creator-avatar left"><img ng-src="{{user.avatarSrc}}" /></div>
+							<div class="creator-info left">
+								<div class="creator-name">{{user.name}}</div>
+							</div>
+						</div>
+						<div class="post-new-content">
+							<input class="input-new-post light-border" ng-model="newPost" name="form_newPost" placeholder="What's on your mind?" autofocus />
+						</div>
+						<div class="post-interaction"></div>
+					</section>
+					<section class="post-bottom-half post-bottom-shader light-border cf">
+						<button class="button-new-post gc-blue right" ng-click="submitPost()">Post</button>
+					</section>
+				</form>
+			</section>
+
+			<section class="post" ng-repeat="post in posts | orderBy:order">
+				<section class="post-top-half">
+					<div class="post-creator cf">
+						<div class="creator-avatar left"><img ng-src="{{user.avatarSrc}}" /></div>
+						<div class="creator-info left">
+							<div class="creator-name">{{user.name}}</div>
+							<div class="creator-post-time light-grey">Shared {{post.shareScope}} - {{post.timePosted | date: 'dd MMM yyyy'}}</div>
+						</div>
+						<div class="remove-post light-grey right" ng-click="removePost(post.id)">x</div>
+					</div>
+					<div class="post-content" ng-switch on="post.type">
+						<div ng-switch-when="text" class="post-text">{{post.content}}</div>
+						<div ng-switch-when="photo" class="post-photo">
+							<div class="photo-caption">{{post.photoCaption}}</div>
+							<img ng-src="/images/{{post.content}}" />
+						</div>
+						<div ng-switch-default>{{post.content}}</div>
+					</div>
+					<div class="post-interaction cf">
+						<button class="button-like grey icomoon left" ng-click="likePost(post.id)">{{post.likeCount}}</button>
+						<button class="button-share grey icomoon left" ng-click="sharePost(post.id)">{{post.shareCount}}</button>
+						<div class="liked-by right">
+							<div class="liked-by-user"></div>
+							<div class="liked-by-user"></div>
+							<div class="liked-by-user"></div>
+							<div class="liked-by-user"></div>
+						</div>
+					</div>
+				</section>
+				<section class="post-bottom-half post-bottom-shader light-border">
+					<div class="comments" ng-if="comments[post.id-1].commentList.length" ng-click="hideComments()">
+						<div class="comment-count grey icomoon">{{comments[post.id-1].commentList.length}} comment(s)</div>
+						<div class="comment cf" ng-repeat="entry in comments[post.id-1].commentList">
+							<div class="commenter-avatar gc-blue left"></div>
+							<div class="commenter-entry left">
+								<div class="commenter-name">{{entry.name}} <span class="light-grey">{{entry.time}}</span></div>
+								<div class="commenter-comment">{{entry.comment}}</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+		</div>
+	</main>
+</body>
+</html>
