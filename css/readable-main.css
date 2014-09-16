@@ -237,16 +237,17 @@ button, input {
   height: 25px;
   margin-right: 3px;
 }
-.liked-by-user div {
+
+.liked-by div {
   background-color: #0055a3;
 }
-.liked-by-user div:nth-child(1) {
+.liked-by div:nth-child(1) {
   background-color: #1fa300;
 }
-.liked-by-user div:nth-child(3) {
+.liked-by div:nth-child(3) {
   background-color: #a30000;
 }
-.liked-by-user div:nth-child(4) {
+.liked-by div:nth-child(4) {
   background-color: #a36b00;
 }
 
@@ -292,4 +293,5 @@ button, input {
 }
 .commenter-name span {
   font-weight: normal;
+  color: #bbbbbb;
 }

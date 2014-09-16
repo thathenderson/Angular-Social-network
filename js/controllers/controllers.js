@@ -52,7 +52,7 @@ var Controllers = angular.module('Controllers', [])
 			{
 				postId: 2,
 				commentList: [
-					{ name: "DudeBro13", comment: "This is terrible. Hail Satan.", time: "12:15pm" },
+					{ name: "DudeBro13", comment: "This is terrible. You suck.", time: "12:15pm" },
 					{ name: "Grandma", comment: "I have this great joke about lightbulbs. - Grandma", time: "2 days ago" }
 				]
 			},
